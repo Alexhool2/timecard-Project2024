@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 
 app.use("/api/timeCard",timeCardRoutes)
-app.use("api/users",userRoutes)
+app.use("/api/user",userRoutes)
 
 app.use((req,res,next)=>{
   next(Error("Endpoint not found"))

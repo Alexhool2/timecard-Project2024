@@ -13,10 +13,10 @@ export const getTimeCard: RequestHandler = async (req, res,next) => {
 
 
   export const createTimeCard: RequestHandler = async(req,res,next)=>{
-    const {userId,date,time_start,time_end} = req.body
+    const {user_id,date,time_start,time_end} = req.body
     try {
       const newTimeCard = await TimeCardModel.create({
-       user:userId,
+       user:user_id,
         date:date,
         time_start:time_start,
         time_end: time_end
